@@ -28,7 +28,6 @@ build
 # Miscellaneous
 *.local
 
-node_modules/
+
 .env
 
-package-lock.json
