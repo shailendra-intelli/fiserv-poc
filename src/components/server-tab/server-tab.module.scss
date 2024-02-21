@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 88%;
+  position: relative;
+}
+.card-container {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  height: 20em;
+  overflow-y: scroll;
+  & .card {
+    min-height: 300px;
+    width: 100%;
+    & .title-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      & .title {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        padding-top: 10px;
+      }
+      & .button-group {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        gap: 8px;
+        padding: 16px 0px;
+        margin-left: 20px;
+        & .add-btn {
+          color: white !important;
+          border-radius: 4px !important;
+          background-color: #a99f9f !important;
+          padding: 12px;
+          margin-right: 8px;
+          &:active {
+            transform: scale(0.98);
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+          }
+        }
+      }
+    }
+    & .header-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      margin-right: 50px;
+      & .header-url {
+        margin-left: 10px;
+      }
+      & .header-description {
+        margin-left: 365px;
+      }
+    }
+    & .action-container {
+      display: flex;
+      & .action-header {
+        margin-right: 120px;
+      }
+    }
+    & .variable-container {
+      display: flex;
+      gap: 15px;
+      & .variable-input {
+        width: 45%;
+      }
+      & .variable-description {
+        width: 45%;
+      }
+    }
+    & .action-btn-container {
+      display: flex;
+      margin-right: 50px;
+      justify-content: center;
+    }
+  }
+}
+
+.save-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: end;
+  position: absolute;
+  bottom: 1.8rem;
+  right: 16px;
+  & .button {
+    margin-left: 30px;
+    width: 13rem;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 0.3rem;
+    height: 1.8rem !important;
+    padding: 20px;
+    color: white !important;
+    background-color: #ff6600 !important;
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      background-color: #ff6600 !important;
+    }
+  }
+}
+.button-icon {
+  margin-right: 8px;
+  margin-top: 5px;
+}

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: #f3f3f4;
+}
+
+.layout-container {
+  margin-top: 66px;
+  .app {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 24px;
+    padding-top: 24px;
+    .app-section {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 8px;
+      background-color: white;
+      padding-top: 16px;
+    }
+    .app-main {
+      flex: 2;
+      min-height: 500px;
+    }
+  }
+}

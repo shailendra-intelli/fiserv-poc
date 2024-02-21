@@ -1,0 +1,65 @@
+.card-container {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  max-height: 380px;
+  min-width: 900px;
+  overflow-y: scroll;
+  & .card {
+    padding: 15px;
+    padding-right: 45px;
+    min-height: 380px;
+    width: 100%;
+    position: relative;
+    & .input-btn-container {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-start;
+      padding-top: 15px;
+      padding-left: 9px;
+      margin-top: 10px;
+      & .input-btn {
+        width: 200px;
+      }
+    }
+    .btn-container {
+      margin-left: 83.3%;
+      position: absolute;
+      top: 0;
+      margin-top: 40px;
+      padding-left: 10px;
+    }
+  }
+}
+.add-icon:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.modal > div {
+  width: 100% !important;
+  padding-top: 0 !important;
+  & .close-btn {
+    height: 40px;
+    width: 13rem;
+    border-radius: 0.4rem;
+    font-size: 17px;
+    color: white;
+    margin-top: 25px;
+    background-color: #ff6600 !important;
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      background-color: rgb(52, 53, 54);
+    }
+  }
+  & .modal-header {
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    & p {
+      color: rgb(169, 167, 166);
+      margin-top: 20px;
+    }
+  }
+}

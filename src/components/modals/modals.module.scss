@@ -1,0 +1,35 @@
+.modalContainer {
+  width: fit-content;
+}
+.modelChild {
+  width: 100% !important;
+}
+.modal-content {
+  margin-top: -10px !important;
+  justify-content: left !important;
+  margin: 20px;
+}
+.modal-footer {
+  width: 100%;
+  justify-content: flex-end !important;
+}
+.button-confirm {
+  color: #ffffff !important;
+  background-color: #9d9494 !important;
+  width: fit-content !important;
+  margin-left: 1px !important;
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    background-color: #584e4e !important;
+  }
+}
+.button-cancel {
+  width: fit-content !important;
+  color: #9e9e9e !important;
+  background-color: #ffffff !important;
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  }
+}

@@ -1,0 +1,92 @@
+.parameterContainer {
+  .inputParamName {
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+  .inputDescription {
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .dropdownLocation {
+    margin-bottom: 15px;
+    // width: 50%;
+    // margin-right: 10px;
+  }
+
+  .dropdownType {
+    margin-bottom: 10px;
+    // width: 50%;
+  }
+
+  .inputDefault {
+    margin-bottom: 10px;
+  }
+
+  .autoComplete {
+    margin-bottom: 15px;
+  }
+
+  .inputPattern {
+    padding: 1vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+.twoItemGrid {
+  padding: 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.threeItemGrid {
+  display: flex;
+  padding: 1vh;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    margin: 0;
+  }
+}
+
+.inputEnum {
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+  // grid-template-columns: 1fr 1fr;
+  .inputIcon {
+    display: flex;
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.enum-input__inner > input {
+  width: 100% !important;
+}
+
+.enum-array {
+  display: flex;
+}
+.enum-array > div:nth-child(3) {
+  flex: 2;
+}

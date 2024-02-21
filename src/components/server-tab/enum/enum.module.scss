@@ -1,0 +1,32 @@
+.card {
+  display: block;
+  width: fit-content;
+  border: none;
+  padding: 8px;
+
+  & .enum-row {
+    gap: 10px;
+    display: flex;
+    margin-top: 7px;
+    & .disabled {
+      cursor: not-allowed;
+      opacity: 0.2;
+    }
+  }
+  & .add-btn {
+    margin-top: 7px;
+    display: flex;
+
+    & .add-enum-text {
+      color: black;
+      margin-left: 8px;
+      font-weight: 15px;
+      font-weight: 700;
+    }
+  }
+}
+
+.add-btn-icon:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(20, 20, 20, 0.24);
+}

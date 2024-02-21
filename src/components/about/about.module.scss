@@ -1,0 +1,45 @@
+.card-container {
+  border: none;
+  height: 100%;
+  .action-btn-container {
+    gap: 50px;
+    height: 100%;
+    .action-btn {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 8px;
+      width: 275px;
+      height: 275px;
+      .title {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 16px;
+        color: #ff6600;
+      }
+      .desc {
+        padding: 0 18px;
+        text-align: center;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ffedde;
+      }
+    }
+  }
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}

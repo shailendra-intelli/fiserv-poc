@@ -1,0 +1,185 @@
+.main-title {
+  margin: 16px 16px 0px 16px;
+}
+
+.card-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  min-height: 300px;
+}
+
+.card {
+  padding: 24px;
+  min-height: 300px;
+}
+.card-title {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.card-subtitle {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 16px 0px;
+}
+.buttons {
+  border-radius: 4px !important;
+  border: 1px solid rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  padding: 12px;
+}
+.icon-btn-text {
+  margin-left: 8px;
+}
+.add-btn {
+  color: white !important;
+  background-color: #4b4b4b !important;
+  padding: 0 12px;
+  margin-right: 8px;
+}
+
+.data-grid {
+  border: none;
+}
+.data-grid-header {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.url-cell {
+  width: 150px;
+}
+.desc-cell {
+  width: 600px;
+}
+.inputEnum {
+  display: flex;
+  justify-content: center;
+  .inputIcon {
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.enum-input__inner > input {
+  width: 100% !important;
+}
+
+.enum-array {
+  display: flex;
+}
+.enum-array > div:nth-child(3) {
+  flex: 2;
+}
+
+.modal {
+  padding: 10px 16px;
+  max-height: 90vh;
+  overflow: auto;
+  width: 100%;
+  max-width: 700px;
+}
+.modal > div {
+  width: 100% !important;
+  padding-top: 0 !important;
+}
+
+.modal-header {
+  display: flex;
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+.tablist-section {
+  display: block;
+  justify-content: flex-start;
+  width: 100%;
+  height: 90%;
+  .tab-content {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0px 20px 0px;
+  }
+}
+.done-btn {
+  background-color: #4b4b4b !important;
+}
+.enums-list {
+  padding: 4px 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 150px;
+
+  .enum-row {
+    width: 100%;
+    margin: 4px 16px;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+.add-enum-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.active {
+  color: #4b4b4b !important;
+  border: none !important;
+  border-bottom: 2px solid #4b4b4b !important;
+}
+
+.text-input {
+  width: 100%;
+  line-height: 16px;
+  border-radius: 4px;
+  text-align: left;
+  padding: 4px 8px;
+  input {
+    width: 100%;
+  }
+}
+
+.button {
+  background-color: #9e9e9e !important;
+  color: white;
+  border-radius: 5%;
+  padding: 10px 20px;
+  width: fit-content;
+}
+.button-icon {
+  margin-right: 8px;
+  margin-top: 5px;
+}
