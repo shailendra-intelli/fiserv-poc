@@ -9,7 +9,7 @@ import {
   EyeOutlined,
   LoadingOutlined,
 } from "@ant-design/icons";
-import { PawIcon, SaveIcon, UploadIcon } from "../../assets/icons";
+import { ExecuteIcon, PawIcon, SaveIcon, UploadIcon } from "../../assets/icons";
 import Modals from "../modals/Modals";
 import { updateApiValidatorState } from "../../store/reducers/apiValidatorSlice";
 
@@ -54,17 +54,19 @@ const RunPostmanCollection = () => {
 
   const runPostmanCollection = async () => {
     console.log(collectionFile, fileSelectForReport);
-    if (fileSelectForReport === "uploaded" && collectionFile === null) {
-      setUploadStatusMessage({
-        message: "Please upload a postman collection",
-        className: "upload-failure-message",
-      });
-      return;
-    }
     const formData = new FormData();
-    if (collectionFile) {
-      formData.append("postmanCollection", collectionFile);
-    } else {
+
+    if (fileSelectForReport === "uploaded") {
+      if (collectionFile === null) {
+        setUploadStatusMessage({
+          message: "Please upload a postman collection",
+          className: "upload-failure-message",
+        });
+        return;
+      } else {
+        formData.append("postmanCollection", collectionFile);
+      }
+    } else if (fileSelectForReport === "generated") {
       const blob = new Blob([JSON.stringify(createdCollectionData, null, 2)], {
         type: "application/json",
       });
@@ -117,6 +119,11 @@ const RunPostmanCollection = () => {
         message: `${file.name} has been uploaded succesfully`,
         className: "upload-success-message",
       });
+      dispatch(
+        updateApiValidatorState({
+          fileSelectForReport: "uploaded",
+        })
+      );
     }
   };
   return (
@@ -131,13 +138,16 @@ const RunPostmanCollection = () => {
               })
             )
           }
+          style={{ marginBottom: "16px" }}
         >
-          {createdCollectionData.length > 0 && (
+          {createdCollectionData.length > 0 ? (
             <Radio
               label="Import your file here"
               size="sm"
               checked={fileSelectForReport === "uploaded"}
             />
+          ) : (
+            <div style={{ height: "32px" }}></div>
           )}
         </div>
 
@@ -147,6 +157,7 @@ const RunPostmanCollection = () => {
             <h4>Select a file or drag and drop here</h4>
             <p>Accepted file type: .json only</p>
             <FileUpload
+              id="postman-collection"
               fileInputClass={styles.fileUpload}
               onFileSelect={uplodadPostmanCollection}
               fileType=".json"
@@ -199,7 +210,11 @@ const RunPostmanCollection = () => {
             onClick={runPostmanCollection}
           >
             <span className={styles["button-icon"]}>
-              {isCreatingReport ? <LoadingOutlined /> : <CaretRightOutlined />}
+              {isCreatingReport ? (
+                <LoadingOutlined />
+              ) : (
+                <ExecuteIcon fill="#FFFFFF" width={"18px"} height={"18px"} />
+              )}
             </span>
             <span>{isCreatingReport ? "Running..." : "Run Postman"}</span>
           </Button>
